@@ -1,0 +1,16 @@
+def two_sum(nums, target):
+  seen = {}
+  for i in range(len(nums)):
+    if target - nums[i] in seen:
+      return [seen[target-nums[i]],i]
+    seen[nums[i]] = i
+
+  return []
+
+
+
+# Example usage
+nums  =  [ 2, 7, 11, 15]
+target = 18
+result = two_sum(nums, target)
+print(result)  # Output: [1, 2]
