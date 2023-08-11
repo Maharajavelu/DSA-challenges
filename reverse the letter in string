@@ -1,0 +1,12 @@
+def reverse_str(name):
+    rev = name.split()
+    reversed = []
+    for i in rev:
+        reverse = i[::-1]
+        reversed.append(reverse)
+
+    return ' '.join(reversed)
+
+ name = input("Enter the string:")  #Hi how are you
+output = reverse_str(name)
+print(output)  # output : ih woh era uoy
