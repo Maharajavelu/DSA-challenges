@@ -1,0 +1,23 @@
+def is_valid(i,char_set):
+    for j in i:
+        if j not in char_set:
+          return 0
+    return 1
+def valid_count(name, str_1):
+    char_set = set(name)
+    print(char_set)
+    count = 0
+    for i in str_1:
+        if is_valid(i,char_set):
+            count+=1
+    return count
+def check(name , str_1):
+    return valid_count(name, str_1)
+
+name = input()
+str = input()
+
+str_1 = str.strip().split()
+out = check(name, str_1)
+print(out)
+print(str_1)
