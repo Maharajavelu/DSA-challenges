@@ -1,0 +1,7 @@
+def check(name):
+    charset = set(name)
+    sort  = sorted(charset)
+    return ''.join(sort)
+name = input()
+out = check(name)
+print(out)
