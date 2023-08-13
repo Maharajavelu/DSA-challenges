@@ -1,0 +1,20 @@
+
+def is_num(i):
+        if i.isdigit():
+            return int(i)
+        else:
+            return len(i)
+def costly(strs):
+    str = []
+    for i in strs:
+        res = is_num(i)
+        str.append(res)
+
+    return max(str)
+
+
+
+strs = ['apple3', '8', 'banana6', '3','jackfruit29']
+result = costly(strs)
+print(result)
+#output = 8
