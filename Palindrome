@@ -1,0 +1,13 @@
+
+def check(name):
+    sort = name[::-1]
+    return  sort
+name = input()
+str = name
+out = check(name)
+print(out)
+if str == out:
+    print("It is palindrome")
+else:
+    print("It is not a palindrome")
+
