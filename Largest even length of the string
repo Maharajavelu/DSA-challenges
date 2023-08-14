@@ -1,0 +1,66 @@
+#remove the 0 in the middle of the list and  add it on the end of the list
+
+list = [2,0,3,5,0,5,3,2]
+
+for item in list :
+        if item == 0:
+            list.remove(item)
+            list.append(item)
+
+print(list)
+
+
+# WRITE A FUNCTION THAT TAKES A SENTENCE AND RETURNS THE LONGEST EVEN -LENGTH
+#WORD IN THE SENTENCE , OR IF IT HAS NO EVEN-LENGTH WORDS, RETURN '00'
+
+def longest_even(string):
+    # Split the string into words using spaces as separators
+    words = string.split()
+    print(words)
+    # Create a list of tuples for words with even lengths
+    even_word_tuples = [(len(word), word) for word in words if len(word) % 2 == 0]
+
+    # Check if there are any even-length words
+    if len(even_word_tuples):
+        # Sort the list of tuples based on the length
+        sorted_even_word_tuples = sorted(even_word_tuples)
+
+        # Extract the second element (word) from the last tuple in the sorted list
+        longest_even_word = sorted_even_word_tuples[-1][1]
+        return longest_even_word
+    else:
+        return "00"
+
+
+string = "myb apple  kabal isn the founder c cbc cbcbc"
+
+out = longest_even(string)
+print(out)
+
+
+#Another method , it is for list of strings
+def longest_even_word(sentences):
+    results = []
+
+    for sentence in sentences:
+        words = sentence.split()
+        even_words = [word for word in words if len(word) % 2 == 0]
+        if even_words:
+            longest_even = max(even_words, key=len)
+            results.append(longest_even)
+        else:
+            results.append("00")
+
+    return results
+
+
+strings = [
+    "my applex",  # --> my
+    "lorem ipsum consectetur adipiscing elit",  # --> adipiscing
+    "a bbb ccccc"  # --> 000
+]
+
+output = longest_even_word(strings)
+print(output)
+
+
