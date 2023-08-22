@@ -1,3 +1,5 @@
+#print the costliest fruit in the list if it is in digit return the value else return the length of the elememnt, 
+#then stored in separate list then find the max of the list
 
 def is_num(i):
         if i.isdigit():
@@ -17,4 +19,4 @@ def costly(strs):
 strs = ['apple3', '8', 'banana6', '3','jackfruit29']
 result = costly(strs)
 print(result)
-#output = 8
+#output = 11
